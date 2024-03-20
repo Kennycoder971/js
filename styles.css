@@ -16,12 +16,40 @@ body {
     color: var(--text-color);
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
+    transition: .5s;
+    position: relative;
+}
+
+main {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
 }
 
+.change-bg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(-50%);
+    justify-content: center;
+    gap: .5rem;
+    position: absolute;
+    width: 50px;
+    padding: 1rem;
+    top :50%;
+    right: 1vw;
+    list-style: none;
+    background-color: #e2e2e255;
+    border-radius: 100px;
+}
+
+.change-bg li {
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    cursor: pointer;
+}
 .weather-card {
     border: 1px solid var(--border-color);
     border-radius: 5px;
