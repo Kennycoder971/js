@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+    --bg-color:white;
+    --border-color:#e2e2e271;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #023047;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.weather-card {
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    max-width: 90%;
+    width: 400px;
+    margin: 0 auto;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+.weather-card-top, .weather-card-mid{
+    padding: 1.5rem;
+}
+
+.weather-card-top {
+   font-size: 1.3rem;
+   font-weight: bold;
+   text-align: center;
+   border-bottom: 1px solid var(--border-color);
+}
+
+.weather-card-mid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.weather-card-mid-icon  img{
+    width: 100px;
+}
+
+.weather-card-mid p {
+    font-size: 1.3rem;
+}
+.weather-card-mid  .weather-card-mid-temperature {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.weather-card-bottom {
+    display: flex;
+    
+}
+
+.weather-card-bottom > div {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.weather-card-bottom > div i {
+    margin-right: 1rem;
+    display: inline-block;
+    font-size: 2rem;
+}
+.weather-card-bottom-left {
+    border-right: 1px solid var(--border-color);
+}
+
+.weather-card-bottom-right-humidity-num, 
+.weather-card-bottom-left-feels-like-num {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.weather-card-bottom-left-feels-like,
+.weather-card-bottom-right-humidity {
+    font-size: .8rem;
+}
+
+  
