@@ -55,7 +55,15 @@ setTimeout(() => {
 }, oneHour);
 
 // Change background feature
-const colors = ["ef476f", "ffd166", "06d6a0", "118ab2", "dd2d4a"];
+const colors = [
+  "023047",
+  "2EA1E3",
+  "ef476f",
+  "ffd166",
+  "06d6a0",
+  "118ab2",
+  "dd2d4a",
+];
 
 colors.forEach((color) => {
   const li = document.createElement("li");
