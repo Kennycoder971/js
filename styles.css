@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 :root {
-    --bg-color:white;
+    --bg-color:#023047;
     --border-color:#e2e2e271;
+    --text-color:white;
 }
 
 * {
@@ -11,8 +12,8 @@
 }
 
 body {
-    background-color: #023047;
-    color: white;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
     display: flex;
