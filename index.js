@@ -7,16 +7,18 @@ async function getCityJson() {
 
 async function getWeather() {
   const city = await getCityJson();
-  const url = `https://api.weatherapi.com/v1/current.json?key=acabd4755e0b4a88a3c100431231408&q=${city}&aqi=no`;
+  const url = `htt://api.weatherapi.com/v1/current.json?key=acabd4755e0b4a88a3c100431231408&q=${city}&aqi=no`;
   const response = await fetch(url);
   const data = await response.json();
   return data;
 }
 
 (async function () {
-  const data = await getWeather();
+  let html;
 
-  const html = `
+  try {
+    const data = await getWeather();
+    html = `
     <article class="weather-card">
         <h1 class="weather-card-top">Weather App</h1>
         <div class="weather-card-mid">
@@ -44,13 +46,18 @@ async function getWeather() {
             </div>
         </div>
     </article>`;
+  } catch (error) {
+    html = `
+      <p class="error">Oups... Une erreur s'est produite.</p>
+    `;
+  }
 
   document.querySelector("main").innerHTML = html;
 })();
 
 const oneHour = 1000 * 60 * 60;
 
-setTimeout(() => {
+setInterval(() => {
   location.reload();
 }, oneHour);
 
